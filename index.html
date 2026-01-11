@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Spatial-Temporal Aware Visuomotor Diffusion Policy Learning">
-  <meta name="keywords" content="Spatial-Temporal Awareness, Policy Learning">
+        content="ActiveVLA: Injecting Active Perception into Vision-Language-Action Models for Precise 3D Robotic Manipulation">
+  <meta name="keywords" content="Active Perception, Vision-Language-Action, Robotic Manipulation, 3D Vision">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Spatial-Temporal Aware Visuomotor Diffusion Policy Learning</title>
+  <title>ActiveVLA: Injecting Active Perception into Vision-Language-Action Models for Precise 3D Robotic Manipulation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- 请替换为你自己的 Google Analytics ID，如果没有可以注释掉 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -48,35 +49,34 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">Spatial-Temporal Aware Visuomotor Diffusion Policy Learning</h1>
+          <h1 class="title is-2 publication-title">ActiveVLA: Injecting Active Perception into Vision-Language-Action Models for Precise 3D Robotic Manipulation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://zhenyangliu.github.io/">Zhenyang Liu</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="">Yikai Wang</a><sup>3</sup>,</span>
+              <a href="">Yongchong Gu</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="">Kuanning Wang</a><sup>1</sup>,
+              <a href="">Yikai Wang</a><sup>3*</sup>,
             </span>
             <span class="author-block">
-              <a href="">Longfei Liang</a><sup>4</sup>,
+              <a href="">Xiangyang Xue</a><sup>1&#8224;</sup>,
             </span>
             <span class="author-block">
-              <a href="">Xiangyang Xue</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="">Yanwei Fu</a><sup>1,2</sup>,
+              <a href="">Yanwei Fu</a><sup>1,2&#8224;</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Fudan University,</span>
             <span class="author-block"><sup>2</sup>Shanghai Innovation Institute,</span>
-            <span class="author-block"><sup>3</sup>Nanyang Technological University,</span>
-            <span class="author-block"><sup>4</sup>NeuHelium Co., Ltd</span>
+            <span class="author-block"><sup>3</sup>Nanyang Technological University</span>
           </div>
-<!--           <p class="has-text-weight-bold has-text-dark is-size-4">CVPR 2025</p>
-          <div class="column has-text-centered"> -->
-            <div class="publication-links">
+          
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>*</sup>Work done during internship at Fudan University. <sup>&#8224;</sup>Corresponding authors.</span>
+          </div>
+
+          <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
                 <a href=""
@@ -121,11 +121,12 @@
     <!-- 视频部分 -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Spatial-Temporal Aware Visuomotor Diffusion Policy Learning (4D Diffusion Policy)</h2>
+        <h2 class="title is-3">ActiveVLA: Active Perception for Precise Manipulation</h2>
         <div class="content has-text-justified">
           <div class="has-text-centered" style="position: relative;">
-            <video id="dp4-video" autoplay muted loop playsinline style="width: 100%; height: auto;">
-              <source src="./static/videos/demo.mp4" type="video/mp4" />
+            <!-- 请确保替换为 ActiveVLA 的演示视频 -->
+            <video id="activevla-video" autoplay muted loop playsinline style="width: 100%; height: auto;">
+              <source src="./static/videos/demo_activevla.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <!-- 静音开关按钮 -->
@@ -148,10 +149,10 @@
           <!-- 视频下方的说明文字 -->
           <div style="text-align: left; max-width: 800px; margin: 1rem auto;">
             <ul>
-              <li><strong><em>Spatiotemporal-centric visual imitation learning</em></strong>: Unlike existing methods that overlook 3D perception and dynamic interactions, DP4 explicitly models 3D spatial structures and 4D temporal dynamics, improving generalization in dynamic environments.</li>
-              <li><strong><em>4D Diffusion Policy with structured awareness</em></strong>: We introduce a diffusion-based visual imitation learning framework that generates trajectories based on learned spatial-temporal world representations.</li>
-              <li><strong><em>Dynamic Gaussian World Model for structured supervision</em></strong>: Our model actively learns from real-world interactions, ensuring the embedding of 3D spatial and 4D temporal reasoning into policy learning.</li>
-              <li><strong><em>State-of-the-art performance across diverse tasks</em></strong>: DP4 sets unprecedented success rates across 17 simulated and real-world robotic tasks, setting a new benchmark for imitation learning in dynamic environments.</li>
+              <li><strong><em>From Passive to Active Perception</em></strong>: Unlike traditional VLA models that rely on static, end-effector-centric cameras, ActiveVLA treats perception as an active hypothesis-testing process, enabling the robot to "look around" and "look closer".</li>
+              <li><strong><em>Active Viewpoint Selection</em></strong>: The model autonomously determines optimal camera perspectives to maximize visibility and task relevance while minimizing occlusions, crucial for cluttered environments.</li>
+              <li><strong><em>Active 3D Zoom-in</em></strong>: We introduce a mechanism to identify and selectively enhance high-resolution views of task-critical regions, simulating an optical zoom effect for fine-grained manipulation.</li>
+              <li><strong><em>Superior Performance & Generalization</em></strong>: ActiveVLA achieves state-of-the-art results on RLBench (91.8% success rate), COLOSSEUM, and GemBench, and demonstrates strong robustness in real-world tasks involving severe occlusions.</li>
             </ul>
           </div>
         </div>
@@ -161,7 +162,7 @@
 
   <script>
     // 控制视频声音按钮
-    const video = document.getElementById('dp4-video');
+    const video = document.getElementById('activevla-video');
     const btn = document.getElementById('unmute-btn');
 
     btn.addEventListener('click', () => {
@@ -182,10 +183,11 @@
     <div class="hero-body">
       <!-- 使用 Flexbox 居中 -->
       <div class="has-text-centered">
-        <img src="./static/images/teaser.png" alt="Teaser Image" style="width: 70%; height: auto;">
+        <!-- 请替换为 ActiveVLA 的 Figure 1 (teaser.png) -->
+        <img src="./static/images/teaser.png" alt="ActiveVLA Teaser" style="width: 80%; height: auto;">
       </div>
       <h2 class="subtitle has-text-centered">
-        4D Diffusion Policy</span> Spatial-temporal awareness in the 4D Diffusion Policy (DP4). Previous methods train perception and decision-making with trajectory supervision, but trajectory cloning fails to capture the 3D spatial and 4D spatiotemporal relationships. In contrast, DP4 constructs the current 3D scene with 3D spatial supervision from a single RGB-D view and predicts future 3D scene candidates using 4D spatiotemporal supervision, optimizing trajectory generation by effectively capturing both 3D structures and 4D dependencies.
+        <span class="dnerf">ActiveVLA</span> vs. Previous Methods. Traditional VLA systems often fail in tasks like "bring the apples on the table" because fixed cameras miss critical details or become occluded. In contrast, <strong>ActiveVLA</strong> leverages 3D scene understanding to freely place virtual cameras and synthesize optimal viewpoints, enabling robots to adjust their view for clearer, more informative observations and thus achieve more reliable manipulation performance even under occlusion.
       </h2>
     </div>
   </div>
@@ -200,35 +202,39 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          Visual imitation learning is effective for robots to learn versatile tasks. However, many existing methods rely on behavior cloning with supervised historical trajectories, limiting their 3D spatial and 4D spatiotemporal awareness. Consequently, these methods struggle to capture the 3D structures and 4D spatiotemporal relationships necessary for real-world deployment. In this work, we propose 4D Diffusion Policy (DP4), a novel visual imitation learning method that incorporates spatiotemporal awareness into diffusion-based policies. Unlike traditional approaches that rely on trajectory cloning, DP4 leverages a dynamic Gaussian world model to guide the learning of 3D spatial and 4D spatiotemporal perceptions from interactive environments. Our method constructs the current 3D scene from a single-view RGB-D observation and predicts the future 3D scene, optimizing trajectory generation by explicitly modeling both spatial and temporal dependencies. Extensive experiments across 17 simulation tasks with 173 variants and 3 real-world robotic tasks demonstrate that the 4D Diffusion Policy (DP4) outperforms baseline methods, improving the average simulation task success rate by 16.4\% (Adroit), 14\% (DexArt), and 6.45\% (RLBench), and the average real-world robotic task success rate by 8.6\%.          </p>
+            Recent advances in robot manipulation have leveraged pre-trained vision-language models (VLMs) and explored integrating 3D spatial signals into these models for effective action prediction, giving rise to the promising vision-language-action (VLA) paradigm. However, most existing approaches overlook the importance of active perception: they typically rely on static, wrist-mounted cameras that provide an end-effector-centric viewpoint. As a result, these models are unable to adaptively select optimal viewpoints or resolutions during task execution, which significantly limits their performance in long-horizon tasks and fine-grained manipulation scenarios. 
+          </p>
+          <p>
+            To address these limitations, we propose <strong>ActiveVLA</strong>, a novel vision-language-action framework that empowers robots with active perception capabilities for high-precision, fine-grained manipulation. ActiveVLA adopts a coarse-to-fine paradigm, dividing the process into two stages: (1) <strong>Critical region localization</strong>, where it projects 3D inputs onto multi-view 2D projections to identify critical 3D regions; and (2) <strong>Active perception optimization</strong>, where it uses an active view selection strategy to choose optimal viewpoints and applies a 3D zoom-in to improve resolution in key areas. Extensive experiments demonstrate that ActiveVLA achieves precise 3D manipulation and outperforms state-of-the-art baselines on three simulation benchmarks (RLBench, COLOSSEUM, GemBench). Moreover, ActiveVLA transfers seamlessly to real-world scenarios, enabling robots to learn high-precision tasks in complex environments.
+          </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
-    <!--/ Paper video. -->
   </div>
 </section>
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Introduction. -->
+    <!-- Framework. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">The framework of our 4D Diffusion Policy (DP4)</h2>
+        <h2 class="title is-3">The Framework of ActiveVLA</h2>
         <div class="content has-text-justified">
-        </p>
-          <!-- 图片居中 -->
+          <!-- 图片居中，请替换为 ActiveVLA 的 Figure 2 (pipeline.png) -->
           <div class="has-text-centered">
-            <img src="./static/images/pipeline.png" alt="Introduction Image" style="width: 100%; height: auto;">
+            <img src="./static/images/pipeline.png" alt="ActiveVLA Pipeline" style="width: 100%; height: auto;">
           </div>
           <p>
-          From a single-view RGB-D observation, we construct 3D point clouds and extract global and local features to enrich both holistic and focused perceptions. These multi-level representations condition the diffusion policy model to generate trajectories based on current robot states. We introduce a Gaussian world model in DP4 to capture 3D structures and 4D spatiotemporal relationships. The current observation’s 3D Gaussian Splatting (3DGS) is derived via a generalizable Gaussian regressor from point clouds and multi-level features. By enforcing consistency between ground-truth and rendered RGB-D images from this 3DGS, we enhance 3D spatial awareness. Additionally, future 3DGS are predicted from current states using policy-generated trajectories, with rendered RGB-D consistency fostering 4D spatiotemporal awareness. This improved spatiotemporal representation significantly benefits complex tasks such as object grasping and dexterous manipulation.          </p>
+            ActiveVLA adopts a two-stage, <strong>coarse-to-fine</strong> strategy. In the <strong>coarse stage</strong>, three orthographic projections of the 3D scene and a language instruction are processed by the VLM backbone (PaliGemma) to generate 2D heatmaps, which are then back-projected to locate the most relevant 3D region. 
+          </p>
           <p>
+            In the <strong>fine stage</strong>, an <strong>Active Perception</strong> module takes over. It first performs <strong>Active Viewpoint Selection</strong> to choose new camera views that maximize visibility and diversity based on the identified region. Then, it executes an <strong>Active 3D Zoom-in</strong> strategy to render high-resolution details of the critical area. The refined visual inputs are fed back into the VLM to predict heatmaps for key end-effector positions, while an action decoder outputs the final 3D action (rotation, gripper state, etc.). This closed-loop design allows the robot to "look closer" before acting.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Introduction. -->
+    <!--/ Framework. -->
   </div>
 </section>
 
@@ -240,19 +246,22 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Results</h2>
         <div class="content has-text-justified">
-          <!-- 并排图片 -->
+          <!-- 并排图片，请替换为 ActiveVLA 的实验结果图 (如 Figure 3 或 Figure 4) -->
           <div class="columns">
             <div class="column">
-              <img src="./static/images/qual_1.png" alt="Result Image 1" style="width: 100%; height: auto;">
+              <img src="./static/images/qual_1.png" alt="Simulation Results" style="width: 100%; height: auto;">
+              <p class="is-size-7 has-text-centered">Fine-grained manipulation in simulation.</p>
             </div>
             <div class="column">
-              <img src="./static/images/qual_2.png" alt="Result Image 2" style="width: 100%; height: auto;">
+              <img src="./static/images/qual_2.png" alt="Real Robot Results" style="width: 100%; height: auto;">
+              <p class="is-size-7 has-text-centered">Real-world tasks with severe occlusion.</p>
             </div>
           </div>
 
           <ul class="content">
-            <li> The red mark indicates a pose that significantly deviates from the expert demonstration, while the green mark denotes a pose that aligns with the expert trajectory. The 4D Diffusion Policy (DP4) integrates 3D spatial and 4D spatiotemporal awareness with diffusion policies, successfully completing the tasks.</li>
-            <li> Visualization of DP4 performance on three real-world robotic tasks. DP4 demonstrates strong performance in real-world settings and effectively handles a variety of common tasks with a single view.</li>
+            <li><strong>Simulation Benchmarks:</strong> ActiveVLA achieves a new state-of-the-art on RLBench with a <strong>91.8%</strong> average success rate, surpassing previous methods like BridgeVLA and 3D Diffuser Actor. It also dominates on the COLOSSEUM benchmark (robustness to perturbations) and GemBench (generalization).</li>
+            <li><strong>Real-World Robustness:</strong> As shown in the figures, ActiveVLA effectively handles complex real-world scenarios involving severe occlusions (e.g., retrieving a towel from layered drawers, grasping an occluded banana). By actively selecting viewpoints and zooming in, it can perceive fine-grained geometric details that static cameras miss.</li>
+            <li><strong>Ablation Studies:</strong> Experiments confirm that both Active View Selection (A-VS) and Active 3D Zoom-in (A-3Z) are crucial. A-VS guides <em>where</em> to look, and A-3Z determines <em>how closely</em> to observe, forming a powerful hierarchical perception strategy.</li>
           </ul>
         </div>
       </div>
