@@ -249,12 +249,12 @@
           <!-- 并排图片，请替换为 ActiveVLA 的实验结果图 (如 Figure 3 或 Figure 4) -->
           <div class="columns">
             <div class="column">
-              <img src="./static/images/qual_1.png" alt="Simulation Results" style="width: 100%; height: auto;">
-              <p class="is-size-7 has-text-centered">Fine-grained manipulation in simulation.</p>
+              <img src="./static/images/quantative_1.png" alt="RLBench Simulation Results" style="width: 100%; height: auto;">
+              <p class="is-size-7 has-text-centered">Fine-grained manipulation in RLBench simulation.</p>
             </div>
             <div class="column">
-              <img src="./static/images/qual_2.png" alt="Real Robot Results" style="width: 100%; height: auto;">
-              <p class="is-size-7 has-text-centered">Real-world tasks with severe occlusion.</p>
+              <img src="./static/images/quantative_2.png" alt="COLOSSEUM Simulation Results" style="width: 100%; height: auto;">
+              <p class="is-size-7 has-text-centered">Fine-grained manipulation in COLOSSEUM simulation.</p>
             </div>
           </div>
 
@@ -270,7 +270,64 @@
   </div>
 </section>
 
+<!-- Figure 3: Qualitative Results (Simulation) -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Results: Coarse-to-Fine Perception</h2>
+        <div class="content has-text-justified">
+          <p>
+            We visualize the internal reasoning process of ActiveVLA on fine-grained manipulation tasks. This corresponds to <strong>Figure 3</strong> in the paper.
+          </p>
+          <!-- 请确保图片路径正确，对应 Figure 3 -->
+          <div class="has-text-centered">
+            <img src="./static/images/visualization_1.png" alt="Qualitative results of fine-grained manipulation" style="width: 100%; height: auto;">
+          </div>
+          <p>
+            As shown above, the process is divided into two stages:
+            <br>
+            <strong>1. Coarse Stage (Left of dotted line):</strong> The model projects 3D modalities onto orthographic images (a) and predicts heatmaps to roughly mark critical regions (b).
+            <br>
+            <strong>2. Fine Stage (Right of dotted line):</strong> Based on these regions, ActiveVLA performs <strong>Active View Selection</strong> (c) to find the best angle and <strong>Active 3D Zoom-in</strong> (d) to capture high-resolution details. This enables precise manipulation in complex scenes like "Sweeping dirt to the dustpan" or "Placing jello in the cupboard".
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- Figure 4: Real-World Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Real-World Experiments: Handling Severe Occlusions</h2>
+        <div class="content has-text-justified">
+          <p>
+            We evaluate ActiveVLA in real-world scenarios characterized by complex spatial structures and severe occlusions. This corresponds to <strong>Figure 4</strong> in the paper.
+          </p>
+          <!-- 请确保图片路径正确，对应 Figure 4 -->
+          <div class="has-text-centered">
+            <img src="./static/images/visualization_2.png" alt="Real-world manipulation tasks" style="width: 100%; height: auto;">
+          </div>
+          <p>
+            The figure demonstrates ActiveVLA's capability in four challenging tasks:
+          </p>
+          <ul>
+            <li><strong>Pick up the banana (Occluded):</strong> The banana is hidden by other fruits. ActiveVLA changes the viewpoint to find it.</li>
+            <li><strong>Stack blocks (Occluded):</strong> The target red cube is hidden behind other blocks. The model finds a view to reveal it.</li>
+            <li><strong>Cup on holder (Occluded):</strong> The cup is obscured by the holder structure.</li>
+            <li><strong>Towel in drawer (Occluded):</strong> The towel is inside a drawer, requiring the robot to look inside.</li>
+          </ul>
+          <p>
+            In all cases, ActiveVLA actively perceives the environment to resolve ambiguities and precisely completes the tasks, demonstrating strong generalization to real-world constraints.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="container">
